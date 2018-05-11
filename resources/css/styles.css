@@ -1,9 +1,11 @@
 /* Universal Styles */
-html, body {
-  font-family: "Helvetica", sans-serif;
+html {
   font-size: 18px;
-  margin: 0;
-  /* line-height: 1.4em; */
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  line-height: 1.4;
 }
 
 .container {
@@ -13,9 +15,12 @@ html, body {
 
 /* Header Styles */
 header {
+  background-color: black;
+}
+
+header div {
   display: flex;
   align-items: center;
-  background-color: black;
 }
 
 header img {
@@ -189,7 +194,7 @@ footer div {
   }
   .main .text-box {
     position: relative;
-    top: 10.5rem;
+    top: 10rem;
     width: 100%;
     padding: 1rem 2rem;
   }
