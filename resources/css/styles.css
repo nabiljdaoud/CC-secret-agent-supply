@@ -3,7 +3,7 @@ html, body {
   font-family: "Helvetica", sans-serif;
   font-size: 18px;
   margin: 0;
-  /* background-color: black; */
+  /* line-height: 1.4em; */
 }
 
 .container {
@@ -29,6 +29,7 @@ header h3 {
   display: inline-block;
   color: white;
   font-size: 1rem;
+  font-weight: lighter;
 }
 
 /* Main Banner Styles */
@@ -43,21 +44,20 @@ header h3 {
 .main .text-box {
   position: relative;
   top: 9rem;
-  margin-left: 0;
-  background: black;
-  width: 23rem;
+  /* margin-left: 0; */
+  background-color: black;
+  width: 20rem;
+  padding: 2rem 3rem;
+  color: white;
 }
 
-.main .text-box h3 {
-  padding: 2rem 0 0.25rem 3rem;
-  color: white;
+.main .text-box h4 {
+  font-weight: normal;
 }
 
 .main .text-box h1 {
-  padding: 0 0 2rem 3rem;
   font-size: 2rem;
-  font-weight: bold;
-  color: white;
+  font-weight: normal;
 }
 
 /* Navigation Bar Styles */
@@ -81,6 +81,7 @@ nav.small {
 nav a {
   text-decoration: none;
   color: white;
+  font-weight: lighter;
 }
 
 /* Products Gallery Styles */
@@ -90,7 +91,7 @@ nav a {
   justify-content: space-between;
 }
 
-.products .image {
+.products .product {
   border: 4px solid black;
   width: 30%;
   display: flex;
@@ -98,13 +99,13 @@ nav a {
   align-items: center;
 }
 
-.products .image img {
+.products .product img {
   height: 9rem;
   padding: 2rem 0;
   max-width: 100%;
 }
 
-.products .image span {
+.products .product span {
   display: block;
   background-color: black;
   color: white;
@@ -129,7 +130,6 @@ nav a {
   background-color: black;
   color: white;
   padding: 1rem 2rem;
-  width: 100%;
 }
 
 /* Footer Styles */
@@ -140,4 +140,94 @@ footer {
 
 footer div {
   padding: 5rem 0;
+}
+
+/* Responsive Styles */
+
+/* Desktop View above 1025px width */
+@media only screen and (min-width: 1025px) {
+  nav.small {
+    display: none;
+  }
+}
+
+/* Tablet View between 470px and 1024px  */
+@media only screen and (min-width: 470px) and (max-width: 1024px) {
+  html, body {
+    font-size: 16px;
+  }
+
+  nav.large {
+    display: none;
+  }
+  /* resize the remaining products */
+  .products .product {
+    width: 47%;
+  }
+  /* hide the last product */
+  .products .product:last-of-type {
+    display: none;
+  }
+}
+
+/* Mobile View below 469px */
+@media only screen and (max-width: 469px) {
+  html, body {
+    font-size: 16px;
+  }
+
+  header img {
+    margin: 1rem auto;
+  }
+  header h3 {
+    display: none;
+  }
+
+  /* resize divs and text in main */
+  .main {
+    height: 15rem;
+  }
+  .main .text-box {
+    position: relative;
+    top: 10.5rem;
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+  .main .text-box h4 {
+    font-size: 0.77rem;
+  }
+  .main .text-box h1 {
+    font-size: 1rem;
+    max-width: 270px;
+  }
+
+  nav.large {
+    display: none;
+  }
+
+  /* resize the remaining product */
+  .products .product {
+    width: 90%;
+    margin: auto;
+  }
+  /* hide the last two products */
+  .products .product:nth-of-type(1n+2) {
+    display: none;
+  }
+
+  /* stack Store Info */
+  .business-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .business-info .info {
+    width: 90%;
+    margin: 0.5rem auto;
+  }
+
+  /* center footer text */
+  footer {
+    text-align: center;
+  }
 }
