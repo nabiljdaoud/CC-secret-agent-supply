@@ -198,7 +198,7 @@ footer div {
   }
   .main .text-box {
     position: relative;
-    top: 10.3rem;
+    top: 10.25rem;
     width: 100%;
     padding: 1rem 2rem;
   }
@@ -207,7 +207,6 @@ footer div {
   }
   .main .text-box h1 {
     font-size: 1rem;
-    /* max-width: 270px; */
   }
 
   ul.large {
